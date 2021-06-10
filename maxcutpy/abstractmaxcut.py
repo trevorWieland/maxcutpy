@@ -4,8 +4,10 @@ import networkx as nx
 
 from typing import Optional, List
 
+from abc import ABC, abstractmethod
 
-class MaxCut(object):
+
+class AbstractMaxCut(ABC):
 
     def __init__(self, seed: Optional[int] = 12345, matrix: Optional[np.array] = None, graph: Optional[nx.Graph] = None):
         self.seed = seed
@@ -67,12 +69,14 @@ class MaxCut(object):
 
         return cut_vectors
 
+    @abstractmethod
+    def batch_split(self):
+        """A function to split the batches.
 
-if __name__ == "__main__":
-    maxcut = MaxCut()
+        This function is an abstract method in the class AbstractMaxCut.
+        Should rely on internal attributes, and take no input parameters.
 
-    cut_vectors = maxcut.generate_cut_vectors(3, 3, [0.5, 0.5, 0.5])
-    print(cut_vectors)
-
-    scores = maxcut.score_cut_vectors(cut_vectors)
-    print(type(scores))
+        Should return a single cut vector, which is a numpy array of shape (1, n), where
+        n is the number of vertices in the matrix
+        """
+        pass

@@ -4,9 +4,9 @@ import networkx as nx
 
 from typing import Optional, List
 from tqdm import tqdm
-from maxcut import MaxCut
+from abstractmaxcut import AbstractMaxCut
 
-class CEMaxCut(MaxCut):
+class CrossEntropyMaxCut(AbstractMaxCut):
 
     def __init__(self, seed: Optional[int] = 12345, matrix: Optional[np.array] = None, p_cutoff: Optional[np.float64] = 0.1, N: Optional[int] = 1000, convergence_threshold: Optional[np.float64] = 0.0001, max_iters: Optional[int] = 1000):
 

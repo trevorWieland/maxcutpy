@@ -4,9 +4,9 @@ import networkx as nx
 
 from typing import Optional, List
 from tqdm import tqdm
-from maxcut import MaxCut
+from abstractmaxcut import AbstractMaxCut
 
-class RNDMaxCut(MaxCut):
+class RandomMaxCut(AbstractMaxCut):
 
     def batch_split(self):
         if self.batches_split:
@@ -20,8 +20,3 @@ class RNDMaxCut(MaxCut):
 
             self.batches_split = True
             return self.best_cut_vector
-
-if __name__ == "__main__":
-    maxcut = RNDMaxCut()
-
-    print(maxcut.batch_split())
