@@ -35,4 +35,4 @@ jobs:
       - name: Run Poetry Install
         run: poetry install
       - name: Run Poetry Pytests
-        run: poetry pytest
+        run: poetry run pytest
