@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "maxcutpy"
+version = "0.1.0"
+description = "A Python Implementation of Graph Max Cut Solutions"
+authors = ["trevorWieland <trevor_wieland@mac.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.2.4"
+numpy = "^1.20.3"
+pytest = "^6.2.4"
+networkx = "^2.5.1"
+tqdm = "^4.61.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

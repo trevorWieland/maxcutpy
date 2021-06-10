@@ -4,7 +4,7 @@ import networkx as nx
 
 from typing import Optional, List
 from tqdm import tqdm
-from abstractmaxcut import AbstractMaxCut
+from maxcutpy.abstractmaxcut import AbstractMaxCut
 
 class CrossEntropyMaxCut(AbstractMaxCut):
 
@@ -51,6 +51,7 @@ class CrossEntropyMaxCut(AbstractMaxCut):
 
             self.best_cut_vector = cut_vectors[np.argmax(scores), :]
             self.best_cut_score = max(scores)
+            self.batches_split = True
             return self.best_cut_vector
 
 
