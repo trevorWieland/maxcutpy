@@ -70,7 +70,7 @@ class AbstractMaxCut(ABC):
         return cut_vectors
 
     @abstractmethod
-    def batch_split(self):
+    def batch_split(self) -> np.array:
         """A function to split the batches.
 
         This function is an abstract method in the class AbstractMaxCut.

@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "A Python Implementation of Graph Max Cut Solutions"
 authors = ["trevorWieland <trevor_wieland@mac.com>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/trevorWieland/maxcutpy"
 
 [tool.poetry.dependencies]
 python = "^3.8"
