@@ -6,7 +6,7 @@ authors = ["trevorWieland <trevor_wieland@mac.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 pandas = "^1.2.4"
 numpy = "^1.20.3"
 pytest = "^6.2.4"
