@@ -6,6 +6,8 @@ from typing import Optional, List
 
 from abc import ABC, abstractmethod
 
+from sklearn.preprocessing import LabelEncoder
+
 
 class AbstractMaxCut(ABC):
 
@@ -37,7 +39,7 @@ class AbstractMaxCut(ABC):
 
             dataframe.columns = ["NODEA", "NODEB", "EDGE_WEIGHT"]
             UG = self._transform_long_2_nx(dataframe)
-            self.matrix = nx.to_numpy_matrix(graph)
+            self.matrix = nx.to_numpy_matrix(UG)
 
         else:
             raise RuntimeError("At least one of `matrix`, `graph`, or `dataframe` must not be None!")

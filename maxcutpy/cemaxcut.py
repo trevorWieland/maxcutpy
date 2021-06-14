@@ -4,13 +4,14 @@ import networkx as nx
 
 from typing import Optional, List
 from tqdm import tqdm
+
 from maxcutpy.abstractmaxcut import AbstractMaxCut
 
 class CrossEntropyMaxCut(AbstractMaxCut):
 
-    def __init__(self, seed: Optional[int] = 12345, matrix: Optional[np.array] = None, p_cutoff: Optional[np.float64] = 0.1, N: Optional[int] = 1000, convergence_threshold: Optional[np.float64] = 0.0001, max_iters: Optional[int] = 1000):
+    def __init__(self, seed: Optional[int] = 12345, matrix: Optional[np.array] = None, graph: Optional[nx.Graph] = None, dataframe: Optional[pd.DataFrame] = None, p_cutoff: Optional[np.float64] = 0.1, N: Optional[int] = 1000, convergence_threshold: Optional[np.float64] = 0.0001, max_iters: Optional[int] = 1000):
 
-        super().__init__(seed=seed, matrix=matrix)
+        super().__init__(seed=seed, matrix=matrix, graph=graph, dataframe=dataframe)
 
         self.p_cutoff = p_cutoff
         self.N = N

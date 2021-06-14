@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "maxcutpy"
-version = "0.1.0"
+version = "0.1.2"
 description = "A Python Implementation of Graph Max Cut Solutions"
 authors = ["trevorWieland <trevor_wieland@mac.com>"]
 license = "MIT"
@@ -13,6 +13,7 @@ numpy = "^1.20.3"
 pandas = "^1.2.4"
 networkx = "^2.5.1"
 tqdm = "^4.61.0"
+scikit-learn = "^0.24.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
