@@ -216,6 +216,12 @@ class MaxCutManager:
 
         return labeled_df
 
+    def score_batches(self):
+        if self.partition_vector is None:
+            raise RuntimeError(f"This function is only usable after calling `split_all`")
+
+
+
 if __name__ == "__main__":
     dataframe = pd.DataFrame()
     dataframe["NODE1"] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]
