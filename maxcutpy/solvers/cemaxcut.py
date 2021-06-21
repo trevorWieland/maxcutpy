@@ -5,7 +5,7 @@ import networkx as nx
 from typing import Optional, List
 from tqdm import tqdm
 
-from maxcutpy.abstractmaxcut import AbstractMaxCut
+from maxcutpy.solvers.abstractmaxcut import AbstractMaxCut
 
 class CrossEntropyMaxCut(AbstractMaxCut):
 
